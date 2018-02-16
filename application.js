@@ -1,5 +1,5 @@
 (function(){
-    var opsCamApp = angular.module('opsCamApp', ['ui.router']);
+    var opsCamApp = angular.module('opsCamApp', ['ui.router', 'googlechart']);
 
     opsCamApp.config(
         function($stateProvider, $urlRouterProvider){
@@ -19,6 +19,12 @@
                 templateUrl: '/opsCamApp/templates/manage.html',
                 controller: 'manageController as mc',
                 data: { displayHome: 'Manage'}
+            })
+            .state('charts', {
+                url: '/charts',
+                templateUrl: '/opsCamApp/templates/charts.html',
+                controller: 'chartsController as cc',
+                data: { displayHome: 'Charts' }
             });
             
         });
