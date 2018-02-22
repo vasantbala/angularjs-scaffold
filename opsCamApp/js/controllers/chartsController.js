@@ -12,7 +12,6 @@
 
         self.myChartObject = new ChartObjectViewModel('PieChart', 'How Much Pizza I Ate Last Night');
 
-
         onLoad = function () {
 
             //mock col data
@@ -20,16 +19,29 @@
             self.myChartObject.data.cols.push(new ChartColumnViewModel('t', 'Toppings', 'string'));
             self.myChartObject.data.cols.push(new ChartColumnViewModel('s', 'slices', 'number'));
 
-            self.myChartObject.data.rows.push(new ChartRowViewModel([new ChartRowCViewModel("Mushrooms"), new ChartRowCViewModel(3)]));
-            self.myChartObject.data.rows.push(new ChartRowViewModel([new ChartRowCViewModel("Olives"), new ChartRowCViewModel(31)]));
-            self.myChartObject.data.rows.push(new ChartRowViewModel([new ChartRowCViewModel("Zucchini"), new ChartRowCViewModel(1)]));
-            self.myChartObject.data.rows.push(new ChartRowViewModel([new ChartRowCViewModel("Pepperoni"), new ChartRowCViewModel(2)]));
-            self.myChartObject.data.rows.push(new ChartRowViewModel([new ChartRowCViewModel("Onions"), new ChartRowCViewModel(3)]));
+            var pizzaSales = chartsService.getRandomValues();
+
+            for (var i = 0; i < pizzaSales.length; i++){
+                self.myChartObject.data.rows.push(new ChartRowViewModel([new ChartRowCViewModel(pizzaSales[i].Name), new ChartRowCViewModel(pizzaSales[i].SalesCount)]));
+            }
         }
         //call onLoad
         onLoad();
 
+
+        self.onGenerate = function () {
+            var pizzaSales = chartsService.getRandomValues();
+
+            self.myChartObject.data.rows.splice(0, self.myChartObject.data.rows.length);
+
+            for (var i = 0; i < pizzaSales.length; i++) {
+                self.myChartObject.data.rows.push(new ChartRowViewModel([new ChartRowCViewModel(pizzaSales[i].Name), new ChartRowCViewModel(pizzaSales[i].SalesCount)]));
+            }
+        }
+
     }
+
+    
 
     function ChartObjectViewModel(type, title) {
         var self = this;
