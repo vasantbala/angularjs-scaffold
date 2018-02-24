@@ -1,0 +1,128 @@
+{
+   "status":"Success",
+   "errorMsg":null,
+   "responseObject":{
+      "models":[
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL02",
+            "dttm_stamp":"2018-01-31 23:19:21",
+            "end_dttm_stamp":"2018-01-31 23:21:33",
+            "status":"Success",
+            "runtime":"00:02:12"
+         },
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL01",
+            "dttm_stamp":"2018-01-31 23:17:04",
+            "end_dttm_stamp":"2018-01-31 23:19:16",
+            "status":"Success",
+            "runtime":"00:02:12"
+         },
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL01_CHK",
+            "dttm_stamp":"2018-01-31 23:15:10",
+            "end_dttm_stamp":"2018-01-31 23:16:59",
+            "status":"Success",
+            "runtime":"00:01:49"
+         },
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL02",
+            "dttm_stamp":"2018-01-31 17:34:45",
+            "end_dttm_stamp":"2018-01-31 17:36:37",
+            "status":"Success",
+            "runtime":"00:01:52"
+         },
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL01",
+            "dttm_stamp":"2018-01-31 17:31:05",
+            "end_dttm_stamp":"2018-01-31 17:34:39",
+            "status":"Success",
+            "runtime":"00:03:34"
+         },
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL01_CHK",
+            "dttm_stamp":"2018-01-31 17:30:10",
+            "end_dttm_stamp":"2018-01-31 17:31:00",
+            "status":"Success",
+            "runtime":"00:00:50"
+         },
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL02",
+            "dttm_stamp":"2018-01-31 12:37:01",
+            "end_dttm_stamp":"2018-01-31 12:39:07",
+            "status":"Success",
+            "runtime":"00:02:06"
+         },
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL01",
+            "dttm_stamp":"2018-01-31 12:31:06",
+            "end_dttm_stamp":"2018-01-31 12:36:54",
+            "status":"Success",
+            "runtime":"00:05:48"
+         },
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL01_CHK",
+            "dttm_stamp":"2018-01-31 12:30:09",
+            "end_dttm_stamp":"2018-01-31 12:31:01",
+            "status":"Success",
+            "runtime":"00:00:52"
+         },
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL02",
+            "dttm_stamp":"2018-01-31 05:34:23",
+            "end_dttm_stamp":"2018-01-31 05:36:16",
+            "status":"Success",
+            "runtime":"00:01:53"
+         },
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL01",
+            "dttm_stamp":"2018-01-31 05:31:04",
+            "end_dttm_stamp":"2018-01-31 05:34:18",
+            "status":"Success",
+            "runtime":"00:03:14"
+         },
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL01_CHK",
+            "dttm_stamp":"2018-01-31 05:30:08",
+            "end_dttm_stamp":"2018-01-31 05:30:58",
+            "status":"Success",
+            "runtime":"00:00:50"
+         },
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL02",
+            "dttm_stamp":"2018-01-31 02:36:49",
+            "end_dttm_stamp":"2018-01-31 02:39:30",
+            "status":"Success",
+            "runtime":"00:02:41"
+         },
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL01",
+            "dttm_stamp":"2018-01-31 02:31:01",
+            "end_dttm_stamp":"2018-01-31 02:36:44",
+            "status":"Success",
+            "runtime":"00:05:43"
+         },
+         {
+            "app_name":"nSAP",
+            "intf_name":"FNSAPL01_CHK",
+            "dttm_stamp":"2018-01-31 02:30:08",
+            "end_dttm_stamp":"2018-01-31 02:30:55",
+            "status":"Success",
+            "runtime":"00:00:47"
+         }
+      ]
+   }
+}

@@ -1,12 +1,56 @@
 
 <div>
-	<h1>Chart here</h1>
-	<h3>{{'Scope - ' + testData}}</h3>
-	<h3>{{'View Model - ' + cc.sampleVM.id}}</h3>
-	<h4>{{'from factory - ' + cc.foo}}</h4>
-	<h4>{{'from service - ' + cc.bar}}</h4>
-	<a href="/#/manage">Manage</a>
+    <h1>Chart here</h1>
+    <h3>{{'Scope - ' + testData}}</h3>
+    <h3>{{'View Model - ' + cc.sampleVM.id}}</h3>
+    <h4>{{'from factory - ' + cc.foo}}</h4>
+    <h4>{{'from service - ' + cc.bar}}</h4>
+    <a href="/#/manage">Manage</a>
 
-	<div google-chart chart="cc.myChartObject" style="height:600px; width:100%;"></div>
+
+
+    <button ng-click="cc.onToggleData()">Toggle Interface Data</button>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Interface Name</td>
+                <td>Start Time</td>
+                <td>End Time</td>
+                <td>Run Time</td>
+                <td>Status</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in cc.masterVMList">
+                <td>{{item.InterfaceName}}</td>
+                <td>{{item.StartTime}}</td>
+                <td>{{item.EndTime}}</td>
+                <td>{{item.RunTime}}</td>
+                <td>{{item.Status}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Interface Name</td>
+                <td ng-repeat="item in cc.detailVMList.Headers">{{item}}</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="rowItem in cc.detailVMList.Rows">
+                <td>{{rowItem.InterfaceName}}</td>
+                <td ng-repeat="headerItem in cc.detailVMList.Headers">{{rowItem.RunTimes[headerItem].RunTime}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div google-chart chart="cc.myChartObject" style="height:600px; width:100%;"></div>
     <button ng-click="cc.onGenerate()">Random Generation</button>
+
+
+
+
+
 </div>

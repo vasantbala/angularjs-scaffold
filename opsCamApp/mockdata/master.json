@@ -1,0 +1,40 @@
+{
+  "status": "Success",
+  "errorMsg": null,
+  "responseObject": {
+    "models": [
+      {
+        "app_name": "PS ICE",
+        "intf_name": "FFINL001",
+        "dttm_stamp": "2018-02-08 17:25:05",
+        "end_dttm_stamp": "2018-02-08 17:33:57",
+        "status": "Success",
+        "runtime": "00:08:52"
+      },
+      {
+        "app_name": "PS ICE",
+        "intf_name": "FFINL001",
+        "dttm_stamp": "2018-02-08 12:25:04",
+        "end_dttm_stamp": "2018-02-08 12:35:08",
+        "status": "Success",
+        "runtime": "00:10:04"
+      },
+      {
+        "app_name": "PS ICE",
+        "intf_name": "FFINL001",
+        "dttm_stamp": "2018-02-08 05:25:04",
+        "end_dttm_stamp": "2018-02-08 05:35:16",
+        "status": "Success",
+        "runtime": "00:10:12"
+      },
+      {
+        "app_name": "PS ICE",
+        "intf_name": "FFINL001",
+        "dttm_stamp": "2018-02-08 02:25:04",
+        "end_dttm_stamp": "2018-02-08 02:35:13",
+        "status": "Success",
+        "runtime": "00:10:09"
+      }
+    ]
+  }
+}

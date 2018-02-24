@@ -1,0 +1,150 @@
+{
+   "status":"Success",
+   "errorMsg":null,
+   "responseObject":{
+      "headers":[
+         "11 PM",
+         "5 PM",
+         "12 PM",
+         "5 AM",
+         "2 AM"
+      ],
+      "data":[
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL02",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 23:19:21",
+            "enddttm_date":"2018-01-31 23:21:33",
+            "11 PM":"00:02:12"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL01",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 23:17:04",
+            "enddttm_date":"2018-01-31 23:19:16",
+            "11 PM":"00:02:12"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL01_CHK",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 23:15:10",
+            "enddttm_date":"2018-01-31 23:16:59",
+            "11 PM":"00:01:49"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL02",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 17:34:45",
+            "enddttm_date":"2018-01-31 17:36:37",
+            "5 PM":"00:01:52"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL01",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 17:31:05",
+            "enddttm_date":"2018-01-31 17:34:39",
+            "5 PM":"00:03:34"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL01_CHK",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 17:30:10",
+            "enddttm_date":"2018-01-31 17:31:00",
+            "5 PM":"00:00:50"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL02",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 12:37:01",
+            "enddttm_date":"2018-01-31 12:39:07",
+            "12 PM":"00:02:06"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL01",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 12:31:06",
+            "enddttm_date":"2018-01-31 12:36:54",
+            "12 PM":"00:05:48"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL01_CHK",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 12:30:09",
+            "enddttm_date":"2018-01-31 12:31:01",
+            "12 PM":"00:00:52"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL02",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 05:34:23",
+            "enddttm_date":"2018-01-31 05:36:16",
+            "5 AM":"00:01:53"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL01",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 05:31:04",
+            "enddttm_date":"2018-01-31 05:34:18",
+            "5 AM":"00:03:14"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL01_CHK",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 05:30:08",
+            "enddttm_date":"2018-01-31 05:30:58",
+            "5 AM":"00:00:50"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL02",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 02:36:49",
+            "enddttm_date":"2018-01-31 02:39:30",
+            "2 AM":"00:02:41"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL01",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 02:31:01",
+            "enddttm_date":"2018-01-31 02:36:44",
+            "2 AM":"00:05:43"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FNSAPL01_CHK",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-01-31 02:30:08",
+            "enddttm_date":"2018-01-31 02:30:55",
+            "2 AM":"00:00:47"
+         }
+      ]
+   }
+}

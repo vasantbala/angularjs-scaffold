@@ -1,0 +1,50 @@
+{
+   "status":"Success",
+   "errorMsg":null,
+   "responseObject":{
+      "headers":[
+         "5 PM",
+         "12 PM",
+         "5 AM",
+         "2 AM"
+      ],
+      "data":[
+         {
+            "rundate":null,
+            "intf_name":"FFINL001",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-02-08 17:25:05",
+            "enddttm_date":"2018-02-08 17:33:57",
+            "5 PM":"00:08:52"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FFINL001",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-02-08 12:25:04",
+            "enddttm_date":"2018-02-08 12:35:08",
+            "12 PM":"00:10:04"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FFINL001",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-02-08 05:25:04",
+            "enddttm_date":"2018-02-08 05:35:16",
+            "5 AM":"00:10:12"
+         },
+         {
+            "rundate":null,
+            "intf_name":"FFINL001",
+            "app_name":null,
+            "status":"Success",
+            "dttm_date":"2018-02-08 02:25:04",
+            "enddttm_date":"2018-02-08 02:35:13",
+            "2 AM":"00:10:09"
+         }
+      ]
+   }
+}

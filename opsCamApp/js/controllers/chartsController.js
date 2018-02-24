@@ -12,6 +12,12 @@
 
         self.myChartObject = new ChartObjectViewModel('PieChart', 'How Much Pizza I Ate Last Night');
 
+        self.masterVMList = [];
+
+        self.mockDataMode = "simple";
+
+        self.detailVMList = null;
+
         onLoad = function () {
 
             //mock col data
@@ -24,6 +30,56 @@
             for (var i = 0; i < pizzaSales.length; i++){
                 self.myChartObject.data.rows.push(new ChartRowViewModel([new ChartRowCViewModel(pizzaSales[i].Name), new ChartRowCViewModel(pizzaSales[i].SalesCount)]));
             }
+
+            self.loadInterfaceData(self.mockDataMode === "simple");
+
+           
+
+            //self.detailVMList = {
+            //    "Headers": ["2 AM", "5 AM", "12 PM", "5 PM"],
+            //    "Rows": [
+            //        {
+            //            "InterfaceName": "FFINL001",
+            //            "RunTimes": {
+            //                "2 AM": { "RunTime": "00:10:09", "Status": "Success" },
+            //                "5 AM": { "RunTime": "00:10:12", "Status": "Success" },
+            //                "12 PM": { "RunTime": "00:10:04", "Status": "Success" },
+            //                "5 PM": { "RunTime": "00:08:52", "Status": "Success" }
+            //            }
+            //        }
+            //    ]
+            //};
+        }
+
+        self.loadInterfaceData = function (isSimpleData) {
+
+            //clear master & detail vm objects
+            if (self.masterVMList != null) {
+                self.masterVMList.splice(0, self.masterVMList.length);
+            }
+            self.detailVMList = null;
+
+            //master
+            var masterData = chartsService.getMaster(isSimpleData).responseObject.models;
+            for (var i = 0; i < masterData.length; i++) {
+                self.masterVMList.push(new MasterViewModel(masterData[i]));
+            }
+
+            //detail
+            var detailData = chartsService.getDetail(isSimpleData).responseObject;
+            self.detailVMList = new DetailViewModel(detailData.headers, detailData.data);
+        }
+
+        self.onToggleData = function () {
+            if (self.mockDataMode == "simple") {
+                self.mockDataMode = "complex";
+                self.loadInterfaceData(false);
+            }
+            else {
+                self.mockDataMode = "simple";
+                self.loadInterfaceData(true);
+            }
+            
         }
         //call onLoad
         onLoad();
@@ -39,6 +95,8 @@
             }
         }
 
+
+        
     }
 
     
@@ -78,7 +136,6 @@
         self.v = v;
     }
 
-
     function sampleViewModel(id, key, value) {
         var self = this;
         self.id = id;
@@ -86,5 +143,75 @@
         self.value = value;
     }
 
+    function MasterViewModel(data) {
+        var self = this;
+
+        self.ApplicationName = data.app_name;
+        self.InterfaceName = data.intf_name;
+        self.StartTime = data.dttm_stamp;
+        self.EndTime = data.end_dttm_stamp;
+        self.Status = data.status;
+        self.RunTime = data.runtime;
+    }
+
+    function DetailViewModel(headers, data) {
+        var self = this;
+
+        self.Headers = headers || [];
+        self.Rows = [];
+
+        var interfaceNameList = [];
+        var interfaceList = [];
+
+        for (var d = 0; d < data.length; d++) {
+            var interfaceName = data[d].intf_name;
+
+            if (interfaceList[interfaceName] == null) {
+                interfaceList[interfaceName] = new InterfaceViewModel(interfaceName, []);     
+                interfaceNameList.push(interfaceName);
+            }
+
+            var dynamicPropName = GetDynamicPropName(headers, data[d]);
+            if (dynamicPropName != null) {
+                //interfaceList[interfaceName].RunTimes.push(new RunTimeViewModel(data[d].status, dynamicPropName, data[d][dynamicPropName]));
+                angular.extend(interfaceList[interfaceName].RunTimes, new RunTimeViewModel(data[d].status, dynamicPropName, data[d][dynamicPropName]));
+            }
+        }
+
+        for (var i = 0; i < interfaceNameList.length; i++) {
+            self.Rows.push(interfaceList[interfaceNameList[i]]);
+        }
+    }
+
+
+    function GetDynamicPropName(headers, data) {
+        for (var h = 0; h < headers.length; h++) {
+            var headerName = headers[h];
+            if (data.hasOwnProperty(headerName)) {
+                return headerName;
+            }
+        }
+        return null;
+    }
+
+
+
+    function InterfaceViewModel(interfaceName) {
+        var self = this;
+        self.InterfaceName = interfaceName;
+        self.RunTimes = [];
+    }
+
+    function RunTimeViewModel(status, time, runTime) {
+        var self = this;
+        //dynamic property
+        self[time] = new RunTimeDetailViewModel(status, runTime);
+    }
+
+    function RunTimeDetailViewModel(status, runTime) {
+        var self = this;
+        self.Status = status;
+        self.RunTime = runTime;
+    }
 
 }(angular.module("opsCamApp")));
