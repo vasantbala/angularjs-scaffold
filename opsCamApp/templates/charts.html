@@ -41,7 +41,11 @@
         <tbody>
             <tr ng-repeat="rowItem in cc.detailVMList.Rows">
                 <td>{{rowItem.InterfaceName}}</td>
-                <td ng-repeat="headerItem in cc.detailVMList.Headers">{{rowItem.RunTimes[headerItem].RunTime}}</td>
+                <td ng-repeat="headerItem in cc.detailVMList.Headers">
+                    <div ng-repeat="rt in rowItem.RunTimes[headerItem]">
+                        {{rt.RunTime}}
+                    </div>
+                </td>
             </tr>
         </tbody>
     </table>

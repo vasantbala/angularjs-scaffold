@@ -236,6 +236,15 @@
                                 "intf_name": "FFINL001",
                                 "app_name": null,
                                 "status": "Success",
+                                "dttm_date": "2018-02-08 05:25:04",
+                                "enddttm_date": "2018-02-08 05:35:16",
+                                "5 AM": "00:20:22"
+                            },
+                            {
+                                "rundate": null,
+                                "intf_name": "FFINL001",
+                                "app_name": null,
+                                "status": "Success",
                                 "dttm_date": "2018-02-08 02:25:04",
                                 "enddttm_date": "2018-02-08 02:35:13",
                                 "2 AM": "00:10:09"

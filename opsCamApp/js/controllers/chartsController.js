@@ -173,8 +173,14 @@
 
             var dynamicPropName = GetDynamicPropName(headers, data[d]);
             if (dynamicPropName != null) {
-                //interfaceList[interfaceName].RunTimes.push(new RunTimeViewModel(data[d].status, dynamicPropName, data[d][dynamicPropName]));
-                angular.extend(interfaceList[interfaceName].RunTimes, new RunTimeViewModel(data[d].status, dynamicPropName, data[d][dynamicPropName]));
+
+                if (interfaceList[interfaceName].RunTimes[dynamicPropName] != undefined && interfaceList[interfaceName].RunTimes[dynamicPropName].length > 0) {
+                    interfaceList[interfaceName].RunTimes[dynamicPropName].push(new RunTimeDetailViewModel(data[d].status, data[d][dynamicPropName]));
+                }
+                else {
+                    //interfaceList[interfaceName].RunTimes.push(new RunTimeViewModel(data[d].status, dynamicPropName, data[d][dynamicPropName]));
+                    angular.extend(interfaceList[interfaceName].RunTimes, new RunTimeViewModel(data[d].status, dynamicPropName, data[d][dynamicPropName]));
+                }
             }
         }
 
@@ -205,8 +211,15 @@
     function RunTimeViewModel(status, time, runTime) {
         var self = this;
         //dynamic property
-        self[time] = new RunTimeDetailViewModel(status, runTime);
+        self[time] = [];
+        self[time].push(new RunTimeDetailViewModel(status, runTime));
     }
+
+    /*function RunTimeViewModel(status, time, runTime) {
+        var self = this;
+        //dynamic property
+        self[time] = new RunTimeDetailViewModel(status, runTime);
+    }*/
 
     function RunTimeDetailViewModel(status, runTime) {
         var self = this;
